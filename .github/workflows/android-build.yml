@@ -21,7 +21,25 @@ jobs:
 
       - name: Prepare signing keystore and environment
         run: |
-          base64 -d debug.keystore.base64 > debug.keystore
+          if [ ! -f debug.keystore ]; then
+            if [ -f debug.keystore.base64 ]; then
+              base64 -d debug.keystore.base64 > debug.keystore
+            else
+              keytool -genkeypair -v \
+                -keystore debug.keystore \
+                -storepass android \
+                -alias androiddebugkey \
+                -keypass android \
+                -keyalg RSA \
+                -keysize 2048 \
+                -validity 10000 \
+                -dname "CN=Android Debug,O=Android,C=US"
+            fi
+          fi
+
+          if [ ! -f .env.example ]; then
+            touch .env.example
+          fi
           if [ ! -f .env ]; then
             cp .env.example .env
           fi
@@ -30,6 +48,7 @@ jobs:
         run: |
           SDK_DIR="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
           if [ -n "$SDK_DIR" ]; then
+            [ -w "$SDK_DIR" ] || sudo chown -R "$(id -u):$(id -g)" "$SDK_DIR"
             mkdir -p "$SDK_DIR/licenses"
             printf "\n24333f8a63b6825ea9c5514f83c2829b004d1fee" > "$SDK_DIR/licenses/android-sdk-license"
             printf "\n84831b9409646a918e30573bab4c9c91346d8abd" >> "$SDK_DIR/licenses/android-sdk-license"
