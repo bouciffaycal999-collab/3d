@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">TileCraft</string>
+    <string name="studio_subtitle">Empty White Room • True Metric Scale</string>
+    <string name="upload_tile_photo">Upload Tile Photo</string>
+    <string name="recrop_tile">Re-crop</string>
+    <string name="sample_tiles_label">Quick Samples</string>
+    <string name="tile_dimensions_label">Tile Size (cm)</string>
+    <string name="width_cm_label">Width (cm)</string>
+    <string name="height_cm_label">Height (cm)</string>
+    <string name="laying_pattern_label">Laying Pattern</string>
+    <string name="pattern_straight">Straight</string>
+    <string name="pattern_offset">Offset 50%</string>
+    <string name="pattern_diagonal">Diagonal 45°</string>
+    <string name="vary_rotation_label">Natural vein rotation (0° / 90° / 180° / 270°)</string>
+    <string name="grout_label">Grout Joint</string>
+    <string name="room_size_label">Empty Room Size (m)</string>
+    <string name="fullscreen_button">Full Screen</string>
+    <string name="share_result_button">Share Photo</string>
+    <string name="cropper_title">Crop Exact Tile</string>
+    <string name="cropper_hint">Drag corners to isolate only the tile surface (remove poster text &amp; borders)</string>
+    <string name="lock_aspect_ratio">Lock to %1$s:%2$s cm ratio</string>
+    <string name="free_crop">Free crop</string>
+    <string name="rotate_90">Rotate 90°</string>
+    <string name="reset_crop">Reset</string>
+    <string name="apply_tile">Place in Room</string>
+    <string name="cancel">Cancel</string>
+    <string name="zoom_hint">Pinch or double-tap to inspect tile pattern &amp; joints</string>
+    <string name="close_fullscreen">Exit Full Screen</string>
+    <string name="cd_room_preview">Empty white-painted room floor tile visualization</string>
+    <string name="cd_tile_thumbnail">Selected cropped ceramic tile swatch</string>
+    <string name="cd_fullscreen">Open full-screen client preview</string>
+    <string name="cd_share">Share rendered room photo</string>
+    <string name="cd_rotate_image">Rotate uploaded photo 90 degrees</string>
+    <string name="error_load_image">Could not load the selected photo. Please try another image.</string>
+    <string name="share_chooser_title">Share Tile Visualization</string>
+</resources>

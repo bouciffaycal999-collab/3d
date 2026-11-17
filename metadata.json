@@ -1,0 +1,6 @@
+{
+  "name": "TileCraft",
+  "description": "Precision ceramic tile visualizer with exact metric sizing and symmetric placement in empty rooms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
